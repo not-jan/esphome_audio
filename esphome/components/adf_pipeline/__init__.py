@@ -107,9 +107,8 @@ async def to_code(config):
         "esp_adf_patches/idf_v4.4_freertos.patch",
         "https://github.com/espressif/esp-adf/raw/v2.5/idf_patches/idf_v4.4_freertos.patch",
     )
-
     add_idf_component(
-        name="mdns",
+        name="esp-adf",
         repo="https://github.com/espressif/esp-adf.git",
         ref="v2.7",
         path="components",
