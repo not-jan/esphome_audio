@@ -107,6 +107,7 @@ async def to_code(config):
         "esp_adf_patches/idf_v4.4_freertos.patch",
         "https://github.com/espressif/esp-adf/raw/v2.5/idf_patches/idf_v4.4_freertos.patch",
     )
+
     add_idf_component(
         name="esp-adf",
         repo="https://github.com/espressif/esp-adf.git",
@@ -132,3 +133,10 @@ async def to_code(config):
             "tone_partition",
         ],
     )
+    add_idf_component(
+        name="espressif/mdns",
+        repo="https://github.com/espressif/esp-protocols.git",
+        path="components",
+        components=["mdns"]
+    )
+    cg.add_build_flag('-Icomponents/mdns/include') 
